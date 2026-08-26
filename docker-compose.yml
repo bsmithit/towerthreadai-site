@@ -9,8 +9,8 @@ services:
       - traefik.http.routers.towerthreadai-site.tls.certresolver=letsencrypt
       - traefik.http.services.towerthreadai-site.loadbalancer.server.port=80
     networks:
-      - traefik-proxy
+      - n8n-stack_n8n-network
 
 networks:
-  traefik-proxy:
+  n8n-stack_n8n-network:
     external: true
