@@ -1,0 +1,16 @@
+services:
+  towerthreadai-site:
+    build:
+      context: https://github.com/bsmithit/towerthreadai-site.git
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.towerthreadai-site.rule=Host(`towerthreadai.com`) || Host(`www.towerthreadai.com`)
+      - traefik.http.routers.towerthreadai-site.entrypoints=websecure
+      - traefik.http.routers.towerthreadai-site.tls.certresolver=letsencrypt
+      - traefik.http.services.towerthreadai-site.loadbalancer.server.port=80
+    networks:
+      - traefik-proxy
+
+networks:
+  traefik-proxy:
+    external: true
