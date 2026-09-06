@@ -64,6 +64,7 @@
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  html, body { overflow-x: hidden; max-width: 100%; }
   body {
     margin: 0;
     background: var(--cream);
@@ -92,15 +93,22 @@
     margin: 0 0 1.3rem;
     color: var(--navy);
     letter-spacing: -0.02em;
+    overflow-wrap: break-word;
   }
   @media (max-width: 700px) {
-    .hero h1 { font-size: 2.5rem; }
+    .hero h1 { font-size: 2.15rem; letter-spacing: -0.01em; }
   }
   .hero .sub {
     font-size: 1.15rem;
     color: var(--muted);
     margin: 0 0 1.75rem;
     max-width: 60ch;
+    overflow-wrap: break-word;
+  }
+  .hero .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
   }
   .btn {
     display: inline-block;
@@ -120,7 +128,6 @@
     background: transparent;
     color: var(--navy);
     border: 1.5px solid var(--navy);
-    margin-left: 0.75rem;
   }
   .btn.secondary:hover { background: rgba(11,46,120,0.06); }
 
@@ -298,8 +305,10 @@
 <div class="hero wrap">
   <h1 class="display">Built to replace the parts of the job that were replacing your family time.</h1>
   <p class="sub">TowerThreadAI answers your customers instantly, reads their photos to keep the conversation moving, and books real jobs on your real calendar — on whatever channel they text you. So you can put the phone down.</p>
-  <a class="btn" href="#founding">See the founding offer</a>
-  <a class="btn secondary" href="mailto:towerthreadai@gmail.com">Talk to Brian first</a>
+  <div class="actions">
+    <a class="btn" href="#founding">See the founding offer</a>
+    <a class="btn secondary" href="mailto:towerthreadai@gmail.com">Talk to Brian first</a>
+  </div>
 </div>
 
 <div class="wrap-wide">
