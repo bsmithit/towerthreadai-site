@@ -49,15 +49,15 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
 <style>
   :root {
     --cream: #FAF3E9;
     --panel: #FFFFFF;
     --navy: #0B2E78;
     --navy-deep: #031133;
-    --brick: #A8402E;
-    --brick-dark: #8A331F;
+    --brick: #8C2331;
+    --brick-dark: #701C27;
     --text: #1F2430;
     --muted: #5B6472;
     --border: #E6DDC9;
@@ -80,10 +80,9 @@
   /* Header */
   header.site { padding: 1.75rem 0; }
   header.site .wrap { display: flex; align-items: center; gap: 0.6rem; }
-  .mark { width: 63px; height: 40px; flex-shrink: 0; }
-  .brand { font-size: 1.15rem; letter-spacing: -0.01em; }
+  .brand { font-family: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 900; font-size: 1.4rem; letter-spacing: -0.01em; }
   .brand .t1 { color: var(--navy); }
-  .brand .t2 { color: var(--brick); margin-left: 0.2em; }
+  .brand .t2 { color: var(--brick); margin-left: 0.15em; }
 
   /* Hero */
   .hero { padding: 2.5rem 0 3rem; }
@@ -269,7 +268,7 @@
     padding: 2.25rem 2rem;
     text-align: center;
   }
-  .founding h2 { color: #D8826F; }
+  .founding h2 { color: var(--brick); }
   .founding p {
     font-size: 1.1rem;
     max-width: 50ch;
@@ -289,15 +288,7 @@
 
 <header class="site">
   <div class="wrap">
-    <svg class="mark" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="mark-title">
-      <title id="mark-title">TowerThread AI logo</title>
-      <path d="M30,102 Q70,64 112,56 Q152,48 192,26" fill="none" stroke="#0B2E78" stroke-width="10" stroke-linecap="round"/>
-      <circle cx="30" cy="102" r="20" fill="#0B2E78"/>
-      <circle cx="112" cy="56" r="20" fill="#0B2E78"/>
-      <circle cx="192" cy="26" r="24" fill="#A8402E"/>
-      <path d="M181,26 L189,34 L205,15" fill="none" stroke="#FAF3E9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <div class="brand display"><span class="t1">TowerThread</span><span class="t2">AI</span></div>
+    <div class="brand"><span class="t1">TowerThread</span><span class="t2">AI</span></div>
   </div>
 </header>
 
